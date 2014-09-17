@@ -9,6 +9,7 @@
 #include "TestRunner.h"
 #import <Foundation/Foundation.h>
 #include "BlowfishEncoder.h"
+#include "BlowfishEncoder+String.h"
 
 void TestEncodeAndDecoder(NSString* text);
 extern NSString * KPi100000;
@@ -55,6 +56,7 @@ void TestEncodeAndDecoder(NSString* text)
 }
 
 
+
 void TestRunner::Run()
 {
     TestEncodeAndDecoder(@"hello world!");
@@ -66,6 +68,15 @@ void TestRunner::Run()
     {
         TestEncodeAndDecoder( [text substringFromIndex:i]);
     }
+    
+    
+    //for http://www.tools4noobs.com/online_tools/encrypt/ blowfish ecb test
+    
+    BlowfishEncoder* encode = [[BlowfishEncoder alloc] initWithTextKey:@"hello"];
+    encode.enablePadding = NO;
+    
+    NSString* result = [encode encryptECBWithString:@"12345678"];
+    NSLog(@"%@", result);
 }
 
 

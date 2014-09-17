@@ -17,6 +17,8 @@
  */
 - (BlowfishEncoder*)initWithKey:(NSData*) dataKey;
 
+@property (nonatomic,assign)BOOL enablePadding;
+
 
 /**
  *	@brief	加密函数,需要先设置key

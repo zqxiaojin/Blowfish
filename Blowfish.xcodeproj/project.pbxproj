@@ -20,6 +20,8 @@
 		3C70653319C9E7FF008460FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C70652F19C9E7FF008460FA /* main.m */; };
 		3C70653519C9E83C008460FA /* BlowfishEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C70653419C9E83C008460FA /* BlowfishEncoder.mm */; };
 		3C70653619C9E83C008460FA /* BlowfishEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C70653419C9E83C008460FA /* BlowfishEncoder.mm */; };
+		3CB2580019C9EE1F00E2ADA4 /* BlowfishEncoder+String.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3CB257FF19C9EE1F00E2ADA4 /* BlowfishEncoder+String.mm */; };
+		3CB2580119C9EE3100E2ADA4 /* BlowfishEncoder+String.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3CB257FF19C9EE1F00E2ADA4 /* BlowfishEncoder+String.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +54,8 @@
 		3C70652E19C9E7FF008460FA /* iOSBlowfish-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "iOSBlowfish-Info.plist"; path = "iOS/iOSBlowfish-Info.plist"; sourceTree = "<group>"; };
 		3C70652F19C9E7FF008460FA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iOS/main.m; sourceTree = "<group>"; };
 		3C70653419C9E83C008460FA /* BlowfishEncoder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BlowfishEncoder.mm; path = src/BlowfishEncoder.mm; sourceTree = "<group>"; };
+		3CB257FE19C9EE1F00E2ADA4 /* BlowfishEncoder+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BlowfishEncoder+String.h"; path = "src/BlowfishEncoder+String.h"; sourceTree = "<group>"; };
+		3CB257FF19C9EE1F00E2ADA4 /* BlowfishEncoder+String.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "BlowfishEncoder+String.mm"; path = "src/BlowfishEncoder+String.mm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			children = (
 				3C70653419C9E83C008460FA /* BlowfishEncoder.mm */,
 				3C7064B719C9DFDF008460FA /* BlowfishEncoder.h */,
+				3CB257FE19C9EE1F00E2ADA4 /* BlowfishEncoder+String.h */,
+				3CB257FF19C9EE1F00E2ADA4 /* BlowfishEncoder+String.mm */,
 				3C7064B519C9DFDF008460FA /* Blowfish.cpp */,
 				3C7064B619C9DFDF008460FA /* Blowfish.h */,
 			);
@@ -243,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB2580019C9EE1F00E2ADA4 /* BlowfishEncoder+String.mm in Sources */,
 				3C7064B919C9DFDF008460FA /* Blowfish.cpp in Sources */,
 				3C70653519C9E83C008460FA /* BlowfishEncoder.mm in Sources */,
 				3C7064C019C9E13E008460FA /* TestRunner.mm in Sources */,
@@ -257,6 +264,7 @@
 				3C70653319C9E7FF008460FA /* main.m in Sources */,
 				3C70653619C9E83C008460FA /* BlowfishEncoder.mm in Sources */,
 				3C70652619C9E781008460FA /* TestRunner.mm in Sources */,
+				3CB2580119C9EE3100E2ADA4 /* BlowfishEncoder+String.mm in Sources */,
 				3C70653019C9E7FF008460FA /* AppDelegate.mm in Sources */,
 				3C70652719C9E786008460FA /* Blowfish.cpp in Sources */,
 			);
@@ -464,6 +472,7 @@
 				3C7064B219C9DF97008460FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C70652019C9E6C7008460FA /* Build configuration list for PBXNativeTarget "iOSBlowfish" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +481,7 @@
 				3C70652219C9E6C7008460FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

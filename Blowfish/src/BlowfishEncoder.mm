@@ -75,6 +75,7 @@ unsigned long PKCS5PaddingLength(const unsigned char* data, unsigned long datale
 @implementation BlowfishEncoder
 
 @synthesize key = m_key;
+@synthesize enablePadding = m_enablePadding;
 
 - (instancetype)initWithKey:(NSData*) dataKey
 {
@@ -85,7 +86,7 @@ unsigned long PKCS5PaddingLength(const unsigned char* data, unsigned long datale
         if ([dataKey length] > 0)
         {
             self.key = dataKey;
-
+            m_enablePadding = TRUE;
         }
         
     }
@@ -111,14 +112,17 @@ unsigned long PKCS5PaddingLength(const unsigned char* data, unsigned long datale
         unsigned long inputLength = [dataToBeEncrypt length];
 
         //padding
-        unsigned char padding_length = inputLength % sizeof(uint64_t);
-        if (padding_length == 0)
-            padding_length = sizeof(uint64_t);
-        else
-            padding_length = sizeof(uint64_t) - padding_length;
-    
+        unsigned char padding_length = 0;
         
-
+        if (m_enablePadding)
+        {
+            padding_length = inputLength % sizeof(uint64_t);
+            if (padding_length == 0)
+                padding_length = sizeof(uint64_t);
+            else
+                padding_length = sizeof(uint64_t) - padding_length;
+        }
+        
         encryptData = [NSMutableData dataWithLength:inputLength + padding_length];
         if (encryptData == nil)
         {
@@ -200,11 +204,14 @@ unsigned long PKCS5PaddingLength(const unsigned char* data, unsigned long datale
         
         Blowfish_ecb_stop(&ctx);
         
-        unsigned long padding = PKCS5PaddingLength(dw.m_pointer, dw.m_length);
-        
-        if (padding)
-        {
-            [decryptData setLength:dw.m_length - padding];
+        if (m_enablePadding)
+        {        
+            unsigned long padding = PKCS5PaddingLength(dw.m_pointer, dw.m_length);
+            
+            if (padding)
+            {
+                [decryptData setLength:dw.m_length - padding];
+            }
         }
         
         
