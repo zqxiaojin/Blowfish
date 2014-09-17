@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C7064B919C9DFDF008460FA /* Blowfish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C7064B519C9DFDF008460FA /* Blowfish.cpp */; };
+		3C7064BC19C9E009008460FA /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C7064BB19C9E009008460FA /* main.mm */; };
+		3C7064C019C9E13E008460FA /* TestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C7064BE19C9E13E008460FA /* TestRunner.mm */; };
+		3C7064C219C9E1D8008460FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7064C119C9E1D8008460FA /* Foundation.framework */; };
+		3C7064FD19C9E6C7008460FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7064CA19C9E639008460FA /* Foundation.framework */; };
+		3C7064FE19C9E6C7008460FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7064CC19C9E639008460FA /* CoreGraphics.framework */; };
+		3C70652619C9E781008460FA /* TestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C7064BE19C9E13E008460FA /* TestRunner.mm */; };
+		3C70652719C9E786008460FA /* Blowfish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C7064B519C9DFDF008460FA /* Blowfish.cpp */; };
+		3C70653019C9E7FF008460FA /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C70652A19C9E7FF008460FA /* AppDelegate.mm */; };
+		3C70653119C9E7FF008460FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C70652C19C9E7FF008460FA /* InfoPlist.strings */; };
+		3C70653319C9E7FF008460FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C70652F19C9E7FF008460FA /* main.m */; };
+		3C70653519C9E83C008460FA /* BlowfishEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C70653419C9E83C008460FA /* BlowfishEncoder.mm */; };
+		3C70653619C9E83C008460FA /* BlowfishEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C70653419C9E83C008460FA /* BlowfishEncoder.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3C7064A519C9DF97008460FA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3C7064A719C9DF97008460FA /* Blowfish */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Blowfish; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C7064B519C9DFDF008460FA /* Blowfish.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Blowfish.cpp; path = src/Blowfish.cpp; sourceTree = "<group>"; };
+		3C7064B619C9DFDF008460FA /* Blowfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Blowfish.h; path = src/Blowfish.h; sourceTree = "<group>"; };
+		3C7064B719C9DFDF008460FA /* BlowfishEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlowfishEncoder.h; path = src/BlowfishEncoder.h; sourceTree = "<group>"; };
+		3C7064BB19C9E009008460FA /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = mac/main.mm; sourceTree = "<group>"; };
+		3C7064BE19C9E13E008460FA /* TestRunner.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TestRunner.mm; path = test/TestRunner.mm; sourceTree = "<group>"; };
+		3C7064BF19C9E13E008460FA /* TestRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestRunner.h; path = test/TestRunner.h; sourceTree = "<group>"; };
+		3C7064C119C9E1D8008460FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3C7064CA19C9E639008460FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3C7064CC19C9E639008460FA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3C7064FC19C9E6C7008460FA /* iOSBlowfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBlowfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C70652919C9E7FF008460FA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = iOS/AppDelegate.h; sourceTree = "<group>"; };
+		3C70652A19C9E7FF008460FA /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = iOS/AppDelegate.mm; sourceTree = "<group>"; };
+		3C70652D19C9E7FF008460FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		3C70652E19C9E7FF008460FA /* iOSBlowfish-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "iOSBlowfish-Info.plist"; path = "iOS/iOSBlowfish-Info.plist"; sourceTree = "<group>"; };
+		3C70652F19C9E7FF008460FA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iOS/main.m; sourceTree = "<group>"; };
+		3C70653419C9E83C008460FA /* BlowfishEncoder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BlowfishEncoder.mm; path = src/BlowfishEncoder.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C7064A419C9DF97008460FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C7064C219C9E1D8008460FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C7064F919C9E6C7008460FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C7064FE19C9E6C7008460FA /* CoreGraphics.framework in Frameworks */,
+				3C7064FD19C9E6C7008460FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C70649E19C9DF97008460FA = {
+			isa = PBXGroup;
+			children = (
+				3C7064A919C9DF97008460FA /* Blowfish */,
+				3C7064C919C9E639008460FA /* Frameworks */,
+				3C7064A819C9DF97008460FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3C7064A819C9DF97008460FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C7064A719C9DF97008460FA /* Blowfish */,
+				3C7064FC19C9E6C7008460FA /* iOSBlowfish.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C7064A919C9DF97008460FA /* Blowfish */ = {
+			isa = PBXGroup;
+			children = (
+				3C7064B319C9DFB0008460FA /* src */,
+				3C7064BD19C9E121008460FA /* test */,
+				3C7064B419C9DFB6008460FA /* mac */,
+				3C7064F719C9E642008460FA /* iOS */,
+			);
+			path = Blowfish;
+			sourceTree = "<group>";
+		};
+		3C7064B319C9DFB0008460FA /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3C70653419C9E83C008460FA /* BlowfishEncoder.mm */,
+				3C7064B719C9DFDF008460FA /* BlowfishEncoder.h */,
+				3C7064B519C9DFDF008460FA /* Blowfish.cpp */,
+				3C7064B619C9DFDF008460FA /* Blowfish.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		3C7064B419C9DFB6008460FA /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				3C7064BB19C9E009008460FA /* main.mm */,
+			);
+			name = mac;
+			sourceTree = "<group>";
+		};
+		3C7064BD19C9E121008460FA /* test */ = {
+			isa = PBXGroup;
+			children = (
+				3C7064BE19C9E13E008460FA /* TestRunner.mm */,
+				3C7064BF19C9E13E008460FA /* TestRunner.h */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
+		3C7064C919C9E639008460FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C7064C119C9E1D8008460FA /* Foundation.framework */,
+				3C7064CA19C9E639008460FA /* Foundation.framework */,
+				3C7064CC19C9E639008460FA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C7064F719C9E642008460FA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3C70652919C9E7FF008460FA /* AppDelegate.h */,
+				3C70652A19C9E7FF008460FA /* AppDelegate.mm */,
+				3C70652B19C9E7FF008460FA /* en.lproj */,
+				3C70652E19C9E7FF008460FA /* iOSBlowfish-Info.plist */,
+				3C70652F19C9E7FF008460FA /* main.m */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3C70652B19C9E7FF008460FA /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				3C70652C19C9E7FF008460FA /* InfoPlist.strings */,
+			);
+			name = en.lproj;
+			path = iOS/en.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C7064A619C9DF97008460FA /* Blowfish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C7064B019C9DF97008460FA /* Build configuration list for PBXNativeTarget "Blowfish" */;
+			buildPhases = (
+				3C7064A319C9DF97008460FA /* Sources */,
+				3C7064A419C9DF97008460FA /* Frameworks */,
+				3C7064A519C9DF97008460FA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Blowfish;
+			productName = Blowfish;
+			productReference = 3C7064A719C9DF97008460FA /* Blowfish */;
+			productType = "com.apple.product-type.tool";
+		};
+		3C7064FB19C9E6C7008460FA /* iOSBlowfish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C70652019C9E6C7008460FA /* Build configuration list for PBXNativeTarget "iOSBlowfish" */;
+			buildPhases = (
+				3C7064F819C9E6C7008460FA /* Sources */,
+				3C7064F919C9E6C7008460FA /* Frameworks */,
+				3C7064FA19C9E6C7008460FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSBlowfish;
+			productName = iOSBlowfish;
+			productReference = 3C7064FC19C9E6C7008460FA /* iOSBlowfish.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C70649F19C9DF97008460FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Jin;
+			};
+			buildConfigurationList = 3C7064A219C9DF97008460FA /* Build configuration list for PBXProject "Blowfish" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3C70649E19C9DF97008460FA;
+			productRefGroup = 3C7064A819C9DF97008460FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C7064A619C9DF97008460FA /* Blowfish */,
+				3C7064FB19C9E6C7008460FA /* iOSBlowfish */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C7064FA19C9E6C7008460FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C70653119C9E7FF008460FA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C7064A319C9DF97008460FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C7064B919C9DFDF008460FA /* Blowfish.cpp in Sources */,
+				3C70653519C9E83C008460FA /* BlowfishEncoder.mm in Sources */,
+				3C7064C019C9E13E008460FA /* TestRunner.mm in Sources */,
+				3C7064BC19C9E009008460FA /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C7064F819C9E6C7008460FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C70653319C9E7FF008460FA /* main.m in Sources */,
+				3C70653619C9E83C008460FA /* BlowfishEncoder.mm in Sources */,
+				3C70652619C9E781008460FA /* TestRunner.mm in Sources */,
+				3C70653019C9E7FF008460FA /* AppDelegate.mm in Sources */,
+				3C70652719C9E786008460FA /* Blowfish.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3C70652C19C9E7FF008460FA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C70652D19C9E7FF008460FA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3C7064AE19C9DF97008460FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3C7064AF19C9DF97008460FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3C7064B119C9DF97008460FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3C7064B219C9DF97008460FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3C70652119C9E6C7008460FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				INFOPLIST_FILE = "Blowfish/iOS/iOSBlowfish-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3C70652219C9E6C7008460FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				INFOPLIST_FILE = "Blowfish/iOS/iOSBlowfish-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C7064A219C9DF97008460FA /* Build configuration list for PBXProject "Blowfish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C7064AE19C9DF97008460FA /* Debug */,
+				3C7064AF19C9DF97008460FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C7064B019C9DF97008460FA /* Build configuration list for PBXNativeTarget "Blowfish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C7064B119C9DF97008460FA /* Debug */,
+				3C7064B219C9DF97008460FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3C70652019C9E6C7008460FA /* Build configuration list for PBXNativeTarget "iOSBlowfish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C70652119C9E6C7008460FA /* Debug */,
+				3C70652219C9E6C7008460FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C70649F19C9DF97008460FA /* Project object */;
+}
