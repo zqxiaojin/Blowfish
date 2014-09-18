@@ -11,8 +11,9 @@
 int main(int /*argc*/, const char ** /*argv[]*/)
 {
 
-    TestRunner tr;
-    tr.Run();
+    TestRunner* tr = [TestRunner new];
+    [tr run];
+    [tr release];
     return 0;
 }
 

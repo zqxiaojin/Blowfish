@@ -21,8 +21,9 @@
     self.window.rootViewController = [[[UIViewController alloc] initWithNibName:nil bundle:nil] autorelease];
     [self.window makeKeyAndVisible];
     
-    TestRunner tr;
-    tr.Run();
+    TestRunner* tr = [TestRunner new];
+    [tr run];
+    [tr release];
     
     return YES;
 }

@@ -7,78 +7,118 @@
 //
 
 #include "TestRunner.h"
-#import <Foundation/Foundation.h>
-#include "BlowfishEncoder.h"
-#include "BlowfishEncoder+String.h"
 
-void TestEncodeAndDecoder(NSString* text);
+#include "SimpleTestCase.h"
+#include "OnlineCheckTestCase.h"
+
 extern NSString * KPi100000;
 
-void TestEncodeAndDecoder(NSString* text)
+
+@interface TestRunner () <TestCaseReporter>
 {
-    char key[] = "IamTheKey!";
-    NSData* keyData = [NSData dataWithBytes:key length:strlen(key)];
+    BOOL    m_keepRuning;
+    int     m_testCaseIndex;
+}
+
+@property (nonatomic,retain)id<BaseTestCase> currentCase;
+
+@end
+
+
+NSArray* KTestCaseTextArray = @[
+    @"HelloWorld",
+    @"hello world!",
+    @"12345675890",
+    @"abcdefghijklmnopqrstuvwxyzABVDEFGHIJKLMNOPQRSTUVWXYZ",
+    @"!@#$%^&*()-=`~[]\\;':\"<>?,./",
+    @"UC浏览器",
+    @"UCBrowser",
+    KPi100000,
+];
+
+
+
+@implementation TestRunner
+
+@synthesize currentCase;
+
+- (void)run
+{
+
     
-    BlowfishEncoder* encoder = [[BlowfishEncoder alloc] initWithKey:keyData];
+//    //for http://www.tools4noobs.com/online_tools/encrypt/ blowfish ecb test
+//    
+//    BlowfishEncoder* encode = [[BlowfishEncoder alloc] initWithTextKey:@"hello"];
+//    encode.enablePadding = NO;
+//    
+//    NSString* result = [encode encryptECBWithString:@"12345678"];
+//    NSLog(@"%@", result);
+//    
     
-    NSData* encryptData = [text dataUsingEncoding:NSUTF8StringEncoding];
+    NSPort* port = [[NSPort alloc] init];
+    NSRunLoop* loop = [NSRunLoop currentRunLoop];
     
+    [loop addPort:port forMode:NSDefaultRunLoopMode];
     
-    NSDate* start = [NSDate date];
+    [self performSelector:@selector(delayRun) withObject:nil afterDelay:0.f];
+    m_keepRuning = TRUE;
     
-    encryptData = [encoder encryptECBWithData:encryptData];
-    
-    NSLog(@"encrypt %d bytes cost %f ms", (int)[encryptData length] , [[NSDate date] timeIntervalSinceDate:start]  * 1000);
-    
-    start = [NSDate date];
-    
-    //测试解密
-    NSData* decrypt = [encoder decryptECBWithData:encryptData];
-    
-    
-    NSLog(@"decrypt %d bytes cost %f ms", (int)[encryptData length] , [[NSDate date] timeIntervalSinceDate:start]  * 1000);
-    
-    
-    NSString* result = [[[NSString alloc] initWithData:decrypt encoding:NSUTF8StringEncoding] autorelease];
-    
-    
-    if ([result isEqualToString:text])
+    while (m_keepRuning)
     {
-         NSLog(@"Success!");
+        [loop runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    }
+    
+    [loop removePort:port forMode:NSDefaultRunLoopMode];
+    
+    [port release];
+    
+    NSLog(@"Finish");
+}
+
+- (void)onlineCheckResult
+{
+
+}
+
+- (void)caseFinish
+{
+    [self performSelector:@selector(delayRun) withObject:nil afterDelay:0.f];
+}
+
+Class KTestCaseSelector[] = {
+    [SimpleTestCase class],
+//    [OnlineCheckTestCase class],
+    
+};
+
+
+- (void)delayRun
+{
+    int testCaseCount = sizeof(KTestCaseSelector)/sizeof(KTestCaseSelector[0]);
+    
+    if (m_testCaseIndex < testCaseCount)
+    {
+        Class caseClass = KTestCaseSelector[m_testCaseIndex];
+        self.currentCase = [caseClass new];
+        self.currentCase.reporter = self;
+        [self.currentCase run:KTestCaseTextArray];
+        ++m_testCaseIndex;
     }
     else
     {
-        NSLog(@"Fail !!");
-        assert(0);
+        self.currentCase = nil;
+        m_keepRuning = NO;
+        [self caseFinish];
     }
     
-    [encoder release];
 }
 
 
 
-void TestRunner::Run()
-{
-    TestEncodeAndDecoder(@"hello world!");
-    TestEncodeAndDecoder(KPi100000);
-    
-    NSString* text = [KPi100000 substringToIndex:128];
-    
-    for (unsigned long i = 0 ; i < text.length; ++i)
-    {
-        TestEncodeAndDecoder( [text substringFromIndex:i]);
-    }
-    
-    
-    //for http://www.tools4noobs.com/online_tools/encrypt/ blowfish ecb test
-    
-    BlowfishEncoder* encode = [[BlowfishEncoder alloc] initWithTextKey:@"hello"];
-    encode.enablePadding = NO;
-    
-    NSString* result = [encode encryptECBWithString:@"12345678"];
-    NSLog(@"%@", result);
-}
 
+
+
+@end
 
 
 

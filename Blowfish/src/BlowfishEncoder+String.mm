@@ -48,7 +48,7 @@ unsigned char vToc(unsigned char v)
         
     } while (false);
 
-    return nil;
+    return result;
 }
 
 + (NSString*)NSDataToHEXString:(NSData*)data

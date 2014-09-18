@@ -9,15 +9,12 @@
 #ifndef __Blowfish__TestRunner__
 #define __Blowfish__TestRunner__
 
+#import <Foundation/Foundation.h>
 
-class TestRunner
-{
-public:
+@interface TestRunner : NSObject
 
-    void Run();
-    
-    
-};
+- (void)run;
 
+@end
 
 #endif /* defined(__Blowfish__TestRunner__) */

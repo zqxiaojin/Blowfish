@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C30840D19CB2F3000573D5F /* SimpleTestCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C30840C19CB2F3000573D5F /* SimpleTestCase.mm */; };
+		3C30841019CB31D700573D5F /* OnlineCheckTestCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C30840F19CB31D700573D5F /* OnlineCheckTestCase.mm */; };
+		3C6CBDD619CB40BD00EB2D60 /* SimpleTestCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C30840C19CB2F3000573D5F /* SimpleTestCase.mm */; };
+		3C6CBDD719CB40C000EB2D60 /* OnlineCheckTestCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C30840F19CB31D700573D5F /* OnlineCheckTestCase.mm */; };
 		3C7064B919C9DFDF008460FA /* Blowfish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C7064B519C9DFDF008460FA /* Blowfish.cpp */; };
 		3C7064BC19C9E009008460FA /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C7064BB19C9E009008460FA /* main.mm */; };
 		3C7064C019C9E13E008460FA /* TestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C7064BE19C9E13E008460FA /* TestRunner.mm */; };
@@ -37,6 +41,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C30840819CB2E0D00573D5F /* BaseTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTestCase.h; path = test/BaseTestCase.h; sourceTree = "<group>"; };
+		3C30840B19CB2F3000573D5F /* SimpleTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleTestCase.h; path = test/SimpleTestCase.h; sourceTree = "<group>"; };
+		3C30840C19CB2F3000573D5F /* SimpleTestCase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SimpleTestCase.mm; path = test/SimpleTestCase.mm; sourceTree = "<group>"; };
+		3C30840E19CB31D700573D5F /* OnlineCheckTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnlineCheckTestCase.h; path = test/OnlineCheckTestCase.h; sourceTree = "<group>"; };
+		3C30840F19CB31D700573D5F /* OnlineCheckTestCase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OnlineCheckTestCase.mm; path = test/OnlineCheckTestCase.mm; sourceTree = "<group>"; };
 		3C7064A719C9DF97008460FA /* Blowfish */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Blowfish; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7064B519C9DFDF008460FA /* Blowfish.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Blowfish.cpp; path = src/Blowfish.cpp; sourceTree = "<group>"; };
 		3C7064B619C9DFDF008460FA /* Blowfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Blowfish.h; path = src/Blowfish.h; sourceTree = "<group>"; };
@@ -134,6 +143,11 @@
 			children = (
 				3C7064BE19C9E13E008460FA /* TestRunner.mm */,
 				3C7064BF19C9E13E008460FA /* TestRunner.h */,
+				3C30840819CB2E0D00573D5F /* BaseTestCase.h */,
+				3C30840C19CB2F3000573D5F /* SimpleTestCase.mm */,
+				3C30840B19CB2F3000573D5F /* SimpleTestCase.h */,
+				3C30840F19CB31D700573D5F /* OnlineCheckTestCase.mm */,
+				3C30840E19CB31D700573D5F /* OnlineCheckTestCase.h */,
 			);
 			name = test;
 			sourceTree = "<group>";
@@ -250,7 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB2580019C9EE1F00E2ADA4 /* BlowfishEncoder+String.mm in Sources */,
+				3C30840D19CB2F3000573D5F /* SimpleTestCase.mm in Sources */,
 				3C7064B919C9DFDF008460FA /* Blowfish.cpp in Sources */,
+				3C30841019CB31D700573D5F /* OnlineCheckTestCase.mm in Sources */,
 				3C70653519C9E83C008460FA /* BlowfishEncoder.mm in Sources */,
 				3C7064C019C9E13E008460FA /* TestRunner.mm in Sources */,
 				3C7064BC19C9E009008460FA /* main.mm in Sources */,
@@ -266,6 +282,8 @@
 				3C70652619C9E781008460FA /* TestRunner.mm in Sources */,
 				3CB2580119C9EE3100E2ADA4 /* BlowfishEncoder+String.mm in Sources */,
 				3C70653019C9E7FF008460FA /* AppDelegate.mm in Sources */,
+				3C6CBDD719CB40C000EB2D60 /* OnlineCheckTestCase.mm in Sources */,
+				3C6CBDD619CB40BD00EB2D60 /* SimpleTestCase.mm in Sources */,
 				3C70652719C9E786008460FA /* Blowfish.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +352,6 @@
 				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
@@ -387,7 +404,6 @@
 				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
