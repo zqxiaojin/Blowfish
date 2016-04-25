@@ -35,6 +35,10 @@ unsigned long PKCS5PaddingLength(const unsigned char* data, unsigned long datale
 {
     unsigned char length = 0;
     do {
+        if (datalength == 0)
+        {
+            return 0;
+        }
         if (!data || datalength < 8)
         {
             assert(0);
@@ -56,7 +60,7 @@ unsigned long PKCS5PaddingLength(const unsigned char* data, unsigned long datale
         }
         else
         {
-            assert(0);
+            return 0;
         }
         
     } while (false);
